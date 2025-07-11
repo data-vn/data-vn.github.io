@@ -1,46 +1,49 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
 15. Footer Section Styles
 **********/
 .footer {
   position: relative;
-  background: $color-header;
+  background: variables.$color-header;
   &-wrapper {
     max-width: 1500px;
     margin: 0 auto;
-    @include media-breakpoint-down-xxl {
+    @include mixins.media-breakpoint-down-xxl {
       max-width: 1100px;
     }
-    @include media-breakpoint-down-xl {
+    @include mixins.media-breakpoint-down-xl {
       max-width: 900px;
     }
-    @include media-breakpoint-down-lg {
+    @include mixins.media-breakpoint-down-lg {
       max-width: 700px;
     }
-    @include media-breakpoint-down-md {
+    @include mixins.media-breakpoint-down-md {
       max-width: 400px;
     }
 
     .footer-logo {
-      @include media-breakpoint-down-lg {
+      @include mixins.media-breakpoint-down-lg {
         text-align: center;
       }
-      @include media-breakpoint-down-sm {
+      @include mixins.media-breakpoint-down-sm {
         text-align: left;
       }
       a {
-        margin-bottom: $base-margin * 2.5;
-        @include media-breakpoint-down-sm {
-          margin-bottom: $base-margin * 1.25;
+        margin-bottom: variables.$base-margin * 2.5;
+        @include mixins.media-breakpoint-down-sm {
+          margin-bottom: variables.$base-margin * 1.25;
         }
       }
       p {
-        color: $color-secondary-dark;
-        font-family: $font-primary;
-        font-size: $base-font-size * 0.9;
+        color: variables.$color-secondary-dark;
+        font-family: variables.$font-primary;
+        font-size: variables.$base-font-size * 0.9;
         font-weight: 600;
-        margin-bottom: $base-margin * 2.5;
-        @include media-breakpoint-down-sm {
-          margin-bottom: $base-margin * 3.3;
+        margin-bottom: variables.$base-margin * 2.5;
+        @include mixins.media-breakpoint-down-sm {
+          margin-bottom: variables.$base-margin * 3.3;
         }
       }
       img {
@@ -54,19 +57,19 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: $base-margin * 2;
-        @include media-breakpoint-down-lg {
+        margin-bottom: variables.$base-margin * 2;
+        @include mixins.media-breakpoint-down-lg {
           justify-content: center;
         }
-        @include media-breakpoint-down-sm {
+        @include mixins.media-breakpoint-down-sm {
           justify-content: start;
         }
 
         li {
           display: inline-block;
-          margin-right: $base-margin;
+          margin-right: variables.$base-margin;
           &:last-child {
-            margin-right: $base-margin * 0;
+            margin-right: variables.$base-margin * 0;
           }
           a {
             transition: all 0.3s ease-in-out;
@@ -86,41 +89,41 @@
         }
       }
       a {
-        font-size: $base-font-size * 1.25;
+        font-size: variables.$base-font-size * 1.25;
       }
     }
   }
   &-widget {
     margin-left: 80px;
-    @include media-breakpoint-down-xxxl {
+    @include mixins.media-breakpoint-down-xxxl {
       margin-left: 0px;
     }
 
-    @include media-breakpoint-down-lg {
-      margin-bottom: $base-margin * 2.5;
+    @include mixins.media-breakpoint-down-lg {
+      margin-bottom: variables.$base-margin * 2.5;
     }
-    @include media-breakpoint-down-sm {
-      margin-bottom: $base-margin * 3.3;
+    @include mixins.media-breakpoint-down-sm {
+      margin-bottom: variables.$base-margin * 3.3;
     }
     h3 {
-      margin-bottom: $base-margin * 1.6;
-      color: $color-secondary-dark;
-      font-family: $font-primary;
-      font-size: $base-font-size * 0.9;
+      margin-bottom: variables.$base-margin * 1.6;
+      color: variables.$color-secondary-dark;
+      font-family: variables.$font-primary;
+      font-size: variables.$base-font-size * 0.9;
       font-weight: 600;
       opacity: 0.7;
     }
     ul {
-      margin-bottom: $base-margin * 0;
+      margin-bottom: variables.$base-margin * 0;
       li {
         display: block;
-        padding: $base-padding * 0.8 $base-padding * 0.2 $base-padding * 0.8;
+        padding: variables.$base-padding * 0.8 variables.$base-padding * 0.2 variables.$base-padding * 0.8;
         a {
-          color: $color-white;
+          color: variables.$color-white;
           font-weight: 600;
           transition: all 0.3s ease-in-out;
           &:hover {
-            color: $color-anchor;
+            color: variables.$color-anchor;
           }
         }
       }

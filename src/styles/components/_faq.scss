@@ -1,71 +1,74 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
   18. FAQ Section Styles
 **********/
 .faq {
   position: relative;
-  padding: $base-padding * 0 0 $base-padding * 7.5;
-  background: $color-gray-dark;
-  @include media-breakpoint-down-xxl {
-    padding: $base-padding * 0 0 $base-padding * 5;
+  padding: variables.$base-padding * 0 0 variables.$base-padding * 7.5;
+  background: variables.$color-gray-dark;
+  @include mixins.media-breakpoint-down-xxl {
+    padding: variables.$base-padding * 0 0 variables.$base-padding * 5;
   }
-  @include media-breakpoint-down-md {
-    padding: $base-padding * 0 0 $base-padding * 2;
+  @include mixins.media-breakpoint-down-md {
+    padding: variables.$base-padding * 0 0 variables.$base-padding * 2;
   }
   .section-header {
-    padding-bottom: $base-padding * 5;
-    @include media-breakpoint-down-lg {
-      padding-bottom: $base-padding * 3;
+    padding-bottom: variables.$base-padding * 5;
+    @include mixins.media-breakpoint-down-lg {
+      padding-bottom: variables.$base-padding * 3;
     }
   }
 
   &-item {
     width: calc(50% - 32px);
-    margin: 0 $base-margin * 0.8;
-    @include media-breakpoint-down-md {
+    margin: 0 variables.$base-margin * 0.8;
+    @include mixins.media-breakpoint-down-md {
       width: calc(100%);
       margin: 0;
     }
     .card {
       transition: all 0.3s ease-in-out;
-      padding: $base-padding * 3.7 $base-padding * 3.1 $base-padding * 0.8;
-      background: $color-white;
+      padding: variables.$base-padding * 3.7 variables.$base-padding * 3.1 variables.$base-padding * 0.8;
+      background: variables.$color-white;
       border-radius: 20px;
       box-shadow: none;
       z-index: 100;
-      margin-bottom: $base-margin * 1.9;
-      @include media-breakpoint-down-lg {
-        padding: $base-padding * 3 $base-padding * 2 $base-padding * 0.8;
+      margin-bottom: variables.$base-margin * 1.9;
+      @include mixins.media-breakpoint-down-lg {
+        padding: variables.$base-padding * 3 variables.$base-padding * 2 variables.$base-padding * 0.8;
       }
-      @include media-breakpoint-down-md {
-        padding: $base-padding * 2.5 $base-padding * 2 $base-padding * 0;
+      @include mixins.media-breakpoint-down-md {
+        padding: variables.$base-padding * 2.5 variables.$base-padding * 2 variables.$base-padding * 0;
       }
 
       &:hover {
-        background: $color-secondary;
+        background: variables.$color-secondary;
         box-shadow: 0px 40px 60px rgba(189, 189, 189, 0.25);
       }
       &-title {
-        font-size: $base-font-size * 1.6;
+        font-size: variables.$base-font-size * 1.6;
         line-height: 32.5px;
-        margin-bottom: $base-margin * 1.9;
-        padding-right: $base-padding * 5;
+        margin-bottom: variables.$base-margin * 1.9;
+        padding-right: variables.$base-padding * 5;
         font-weight: 600;
-        @include media-breakpoint-down-xxxl {
-          padding-right: $base-padding * 2;
+        @include mixins.media-breakpoint-down-xxxl {
+          padding-right: variables.$base-padding * 2;
         }
-        @include media-breakpoint-down-xl {
-          padding-right: $base-padding * 0;
+        @include mixins.media-breakpoint-down-xl {
+          padding-right: variables.$base-padding * 0;
         }
-        @include media-breakpoint-down-lg {
-          font-size: $base-font-size * 1.4;
+        @include mixins.media-breakpoint-down-lg {
+          font-size: variables.$base-font-size * 1.4;
         }
       }
       &-body {
         padding: 0;
-        margin-bottom: $base-margin * 3;
+        margin-bottom: variables.$base-margin * 3;
         .card-text {
-          font-size: $base-font-size * 1.25;
-          color: $color-text-light;
+          font-size: variables.$base-font-size * 1.25;
+          color: variables.$color-text-light;
           line-height: 35px;
         }
       }
@@ -73,22 +76,22 @@
   }
   // start faq-two section
   &-two {
-    padding-bottom: $base-padding * 9.4;
-    background: $color-gray-dark;
-    @include media-breakpoint-down-xl {
-       padding-bottom: $base-padding * 5;
+    padding-bottom: variables.$base-padding * 9.4;
+    background: variables.$color-gray-dark;
+    @include mixins.media-breakpoint-down-xl {
+       padding-bottom: variables.$base-padding * 5;
     }
-    @include media-breakpoint-down-md {
-       padding-bottom: $base-padding * 3;
+    @include mixins.media-breakpoint-down-md {
+       padding-bottom: variables.$base-padding * 3;
     }
     .section-header {
-       padding-bottom: $base-padding * 4.4;
-       @include media-breakpoint-down-sm {
-          padding-bottom: $base-padding * 3;
+       padding-bottom: variables.$base-padding * 4.4;
+       @include mixins.media-breakpoint-down-sm {
+          padding-bottom: variables.$base-padding * 3;
        }
     }
     .shows {
-       border: 1px solid $color-anchor;
+       border: 1px solid variables.$color-anchor;
     }
   }
 }

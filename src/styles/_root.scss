@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 /********** 
  1. Default  Styles 
 **********/
@@ -179,18 +182,18 @@
 
 /*Font */
 body {
-  font-family: $font-primary;
-  font-size: $base-font-size;
-  color: $color-text;
-  background: $color-white;
+  font-family: variables.$font-primary;
+  font-size: variables.$base-font-size;
+  color: variables.$color-text;
+  background: variables.$color-white;
   line-height: 1.5;
 }
 
 .bg-nav {
-  background: rgba($color-secondary, 0.95);
+  background: rgba(variables.$color-secondary, 0.95);
 
   &.sticky-nav {
-    background: $color-white;
+    background: variables.$color-white;
   }
 }
 
@@ -200,63 +203,63 @@ h3,
 h4,
 h5,
 h6 {
-  color: $color-header;
-  font-family: $font-primary;
+  color: variables.$color-header;
+  font-family: variables.$font-primary;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.5px;
 }
 
 h1 {
-  font-size: $base-font-size * 4;
+  font-size: variables.$base-font-size * 4;
   line-height: 81.25px;
 }
 
 h2 {
-  font-size: $base-font-size * 2.6;
+  font-size: variables.$base-font-size * 2.6;
 }
 
 h3 {
-  font-size: $base-font-size * 2;
+  font-size: variables.$base-font-size * 2;
 }
 
 h4 {
-  font-size: $base-font-size * 1.5;
+  font-size: variables.$base-font-size * 1.5;
 }
 
 h5 {
-  font-size: $base-font-size * 1.25;
+  font-size: variables.$base-font-size * 1.25;
 }
 
 h6 {
-  font-size: $base-font-size * 1;
+  font-size: variables.$base-font-size * 1;
 }
 
 p {
-  font-size: $base-font-size;
-  color: $color-text;
-  font-family: $font-secondary;
-  font-weight: $regular-font-weight;
+  font-size: variables.$base-font-size;
+  color: variables.$color-text;
+  font-family: variables.$font-secondary;
+  font-weight: variables.$regular-font-weight;
   line-height: 2;
   margin-top: 0;
-  margin-bottom: $base-margin;
+  margin-bottom: variables.$base-margin;
   letter-spacing: -0.4px;
 }
 
 a {
-  color: $color-text;
+  color: variables.$color-text;
   text-decoration: none;
   display: inline-block;
-  transition: $base-transition;
+  transition: variables.$base-transition;
 
   a:hover {
-    color: $color-text;
+    color: variables.$color-text;
   }
 }
 
 // Learn-more links
 .load-mores {
-  color: $color-primary;
+  color: variables.$color-primary;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -275,20 +278,20 @@ a {
 
 // section-header style
 .section-header {
-  padding: $base-padding * 9.4 0 $base-padding * 4.1;
+  padding: variables.$base-padding * 9.4 0 variables.$base-padding * 4.1;
   text-align: center;
   position: relative;
 
-  @include media-breakpoint-down-xxl {
-    padding: $base-padding * 7 0 $base-padding * 4.1;
+  @include mixins.media-breakpoint-down-xxl {
+    padding: variables.$base-padding * 7 0 variables.$base-padding * 4.1;
   }
 
-  @include media-breakpoint-down-xl {
-    padding: $base-padding * 6 0 $base-padding * 4.1;
+  @include mixins.media-breakpoint-down-xl {
+    padding: variables.$base-padding * 6 0 variables.$base-padding * 4.1;
   }
 
-  @include media-breakpoint-down-sm {
-    padding: $base-padding * 3 0 $base-padding * 4.1;
+  @include mixins.media-breakpoint-down-sm {
+    padding: variables.$base-padding * 3 0 variables.$base-padding * 4.1;
   }
 
   &.no-top-pad {
@@ -297,46 +300,46 @@ a {
 
   h2 {
     position: relative;
-    font-size: $base-font-size * 4;
+    font-size: variables.$base-font-size * 4;
     line-height: 81.25px;
     letter-spacing: -0.4px;
-    margin-bottom: $base-margin * 1.5;
+    margin-bottom: variables.$base-margin * 1.5;
 
     span {
-      color: $color-primary;
+      color: variables.$color-primary;
     }
 
-    @include media-breakpoint-down-xxl {
-      font-size: $base-font-size * 3.5;
+    @include mixins.media-breakpoint-down-xxl {
+      font-size: variables.$base-font-size * 3.5;
     }
 
-    @include media-breakpoint-down-lg {
-      font-size: $base-font-size * 3;
+    @include mixins.media-breakpoint-down-lg {
+      font-size: variables.$base-font-size * 3;
       line-height: 65px;
     }
 
-    @include media-breakpoint-down-md {
-      font-size: $base-font-size * 2.5;
+    @include mixins.media-breakpoint-down-md {
+      font-size: variables.$base-font-size * 2.5;
       line-height: 1.4;
     }
 
-    @include media-breakpoint-down-sm {
-      font-size: $base-font-size * 1.9;
-      margin-bottom: $base-margin * 0.6;
+    @include mixins.media-breakpoint-down-sm {
+      font-size: variables.$base-font-size * 1.9;
+      margin-bottom: variables.$base-margin * 0.6;
       line-height: 37.5px;
     }
   }
 
   p {
-    font-size: $base-font-size * 1.4;
-    color: $color-text-light;
-    font-weight: $medium-font-weight;
+    font-size: variables.$base-font-size * 1.4;
+    color: variables.$color-text-light;
+    font-weight: variables.$medium-font-weight;
     line-height: 36.3px;
     letter-spacing: -0.4px;
     margin-bottom: 0;
 
-    @include media-breakpoint-down-sm {
-      font-size: $base-font-size * 1.1;
+    @include mixins.media-breakpoint-down-sm {
+      font-size: variables.$base-font-size * 1.1;
       line-height: 29.7px;
       letter-spacing: -0.008px;
     }
@@ -344,28 +347,28 @@ a {
 }
 
 .feature-bg {
-  background: $color-secondary;
+  background: variables.$color-secondary;
 }
 
 .pricing-inner {
-  background: $color-gray-dark;
+  background: variables.$color-gray-dark;
 }
 
 .pricing-inner-two {
-  background: $color-secondary;
+  background: variables.$color-secondary;
 }
 
 // 404 page style
 .error {
   position: relative;
-  background: $color-secondary;
+  background: variables.$color-secondary;
 
   &-content {
     position: relative;
 
     h3 {
-      color: $color-header;
-      font-weight: $bold-font-weight;
+      color: variables.$color-header;
+      font-weight: variables.$bold-font-weight;
     }
 
     img {
@@ -382,23 +385,23 @@ a {
 .Learn-more {
   display: flex;
   align-items: center;
-  margin-top: $base-margin;
+  margin-top: variables.$base-margin;
 
-  @include media-breakpoint-down-lg {
-    margin-top: $base-margin * 3;
+  @include mixins.media-breakpoint-down-lg {
+    margin-top: variables.$base-margin * 3;
   }
 
-  @include media-breakpoint-down-sm {
-    margin-top: $base-margin * 1.25;
+  @include mixins.media-breakpoint-down-sm {
+    margin-top: variables.$base-margin * 1.25;
   }
 
   a {
-    color: $color-primary;
+    color: variables.$color-primary;
     display: flex;
     align-items: center;
     font-size: 18px;
     font-weight: 700;
-    font-family: $font-primary;
+    font-family: variables.$font-primary;
     transition: all 0.3s ease-in-out;
 
     i {
@@ -423,7 +426,7 @@ a {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background: $color-white;
+  background: variables.$color-white;
   background-clip: border-box;
   border-radius: 0.5rem;
   border: none;
@@ -436,11 +439,11 @@ a {
   align-items: center;
   width: 100%;
   padding: 0;
-  font-size: $base-font-size * 1.6;
-  color: $color-header;
-  font-family: $font-primary;
+  font-size: variables.$base-font-size * 1.6;
+  color: variables.$color-header;
+  font-family: variables.$font-primary;
   text-align: left;
-  background: $color-gray;
+  background: variables.$color-gray;
   border: 0;
   font-weight: 600;
   border-radius: 0;
@@ -449,12 +452,12 @@ a {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     border-radius 0.15s ease;
 
-  @include media-breakpoint-down-lg {
-    font-size: $base-font-size * 1.25;
+  @include mixins.media-breakpoint-down-lg {
+    font-size: variables.$base-font-size * 1.25;
   }
 
-  @include media-breakpoint-down-md {
-    font-size: $base-font-size * 1.1;
+  @include mixins.media-breakpoint-down-md {
+    font-size: variables.$base-font-size * 1.1;
   }
 }
 
@@ -466,8 +469,8 @@ a {
 
 .accordion-button:not(.collapsed) {
   padding: 0rem 0rem 0 0rem;
-  color: $color-header;
-  background: $color-gray;
+  color: variables.$color-header;
+  background: variables.$color-gray;
   box-shadow: none;
 }
 
@@ -488,7 +491,7 @@ a {
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
 
-  @include media-breakpoint-down-md {
+  @include mixins.media-breakpoint-down-md {
     width: 1.5rem;
     height: 1.5rem;
     background-size: 1.5rem;
@@ -517,22 +520,22 @@ a {
 
   .header-content {
     position: relative;
-    font-size: $base-font-size * 1.6;
+    font-size: variables.$base-font-size * 1.6;
     font-weight: 600;
-    font-family: $font-secondary;
-    margin: $base-margin * 0 $base-margin * 25 $base-margin * 0 $base-margin * 0;
+    font-family: variables.$font-secondary;
+    margin: variables.$base-margin * 0 variables.$base-margin * 25 variables.$base-margin * 0 variables.$base-margin * 0;
     line-height: 33px;
 
-    @include media-breakpoint-down-xl {
-      margin: $base-margin * 0 $base-margin * 5 $base-margin * 0 $base-margin * 0;
+    @include mixins.media-breakpoint-down-xl {
+      margin: variables.$base-margin * 0 variables.$base-margin * 5 variables.$base-margin * 0 variables.$base-margin * 0;
     }
 
-    @include media-breakpoint-down-lg {
-      margin: $base-margin * 0 $base-margin * 1 $base-margin * 0 $base-margin * 0;
-      font-size: $base-font-size * 1.25;
+    @include mixins.media-breakpoint-down-lg {
+      margin: variables.$base-margin * 0 variables.$base-margin * 1 variables.$base-margin * 0 variables.$base-margin * 0;
+      font-size: variables.$base-font-size * 1.25;
     }
 
-    @include media-breakpoint-down-sm {
+    @include mixins.media-breakpoint-down-sm {
       line-height: 25px;
     }
   }
@@ -540,13 +543,13 @@ a {
 
 .accordion-item {
   position: relative;
-  background: $color-gray;
+  background: variables.$color-gray;
   border-radius: 14px !important;
   margin-bottom: 40px;
-  border: 1px solid $color-white;
+  border: 1px solid variables.$color-white;
   padding: 28px 30px 28px 120px;
 
-  @include media-breakpoint-down-lg {
+  @include mixins.media-breakpoint-down-lg {
     margin-bottom: 20px;
     padding: 20px 20px 20px 60px;
   }
@@ -560,14 +563,14 @@ a {
     width: 49px;
     height: 49px;
     line-height: 49px;
-    background: $color-secondary-dark;
-    border: 2px solid $color-primary-light;
+    background: variables.$color-secondary-dark;
+    border: 2px solid variables.$color-primary-light;
     border-radius: 50%;
     margin-right: 0px;
     font-size: 20px;
     font-weight: 400;
 
-    @include media-breakpoint-down-lg {
+    @include mixins.media-breakpoint-down-lg {
       top: 25px;
       left: 20px;
       width: 30px;
@@ -576,7 +579,7 @@ a {
       font-size: 16px;
     }
 
-    @include media-breakpoint-down-sm {
+    @include mixins.media-breakpoint-down-sm {
       line-height: 25px;
       top: 20px;
     }
@@ -589,21 +592,21 @@ a {
 }
 
 .accordion-body {
-  padding: $base-padding * 1.6 $base-padding * 10 $base-padding * 0 $base-padding * 0;
+  padding: variables.$base-padding * 1.6 variables.$base-padding * 10 variables.$base-padding * 0 variables.$base-padding * 0;
   font-size: 20px;
-  color: $color-text-light;
+  color: variables.$color-text-light;
   letter-spacing: -0.4px;
   line-height: 33px;
-  font-family: $font-secondary;
+  font-family: variables.$font-secondary;
 
-  @include media-breakpoint-down-xl {
-    padding: $base-padding * 1.6 $base-padding * 0 $base-padding * 0 $base-padding * 0;
+  @include mixins.media-breakpoint-down-xl {
+    padding: variables.$base-padding * 1.6 variables.$base-padding * 0 variables.$base-padding * 0 variables.$base-padding * 0;
   }
 }
 
 .accordion-flush .accordion-collapse {
   border-width: 0;
-  border: 1px solid $color-primary;
+  border: 1px solid variables.$color-primary;
 }
 
 .accordion-flush .accordion-item {

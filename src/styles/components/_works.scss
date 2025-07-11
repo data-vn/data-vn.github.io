@@ -1,56 +1,59 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
 14. Works Section Styles 
 **********/
 .works {
-  padding: $base-padding * 9.4 $base-padding * 0 $base-padding * 3.2;
+  padding: variables.$base-padding * 9.4 variables.$base-padding * 0 variables.$base-padding * 3.2;
   overflow: hidden;
 
-  @include media-breakpoint-down-xxl {
-    padding: $base-padding * 6 $base-padding * 0 $base-padding * 3.2;
+  @include mixins.media-breakpoint-down-xxl {
+    padding: variables.$base-padding * 6 variables.$base-padding * 0 variables.$base-padding * 3.2;
   }
 
-  @include media-breakpoint-down-xl {
-    padding: $base-padding * 6 $base-padding * 0 $base-padding * 0;
+  @include mixins.media-breakpoint-down-xl {
+    padding: variables.$base-padding * 6 variables.$base-padding * 0 variables.$base-padding * 0;
   }
 
-  @include media-breakpoint-down-lg {
-    padding: $base-padding * 4 $base-padding * 0 $base-padding * 0;
+  @include mixins.media-breakpoint-down-lg {
+    padding: variables.$base-padding * 4 variables.$base-padding * 0 variables.$base-padding * 0;
   }
 
   &-content {
-    @include media-breakpoint-down-lg {
-      padding-bottom: $base-padding * 5;
+    @include mixins.media-breakpoint-down-lg {
+      padding-bottom: variables.$base-padding * 5;
       text-align: center;
     }
 
     h2 {
-      margin-bottom: $base-margin * 1.5;
-      font-size: $base-font-size * 2.8;
+      margin-bottom: variables.$base-margin * 1.5;
+      font-size: variables.$base-font-size * 2.8;
       line-height: 56.25px;
 
-      @include media-breakpoint-down-md {
-        font-size: $base-font-size * 1.9;
+      @include mixins.media-breakpoint-down-md {
+        font-size: variables.$base-font-size * 1.9;
       }
     }
 
     p {
-      font-size: $base-font-size * 1.4;
+      font-size: variables.$base-font-size * 1.4;
       font-weight: 500;
       line-height: 36.3px;
-      margin-bottom: $base-margin * 3.1;
+      margin-bottom: variables.$base-margin * 3.1;
       width: 80%;
 
-      @include media-breakpoint-down-xxl {
+      @include mixins.media-breakpoint-down-xxl {
         width: 90%;
       }
 
-      @include media-breakpoint-down-xl {
+      @include mixins.media-breakpoint-down-xl {
         width: 100%;
-        font-size: $base-font-size * 1.2;
+        font-size: variables.$base-font-size * 1.2;
       }
 
-      @include media-breakpoint-down-lg {
-        margin-bottom: $base-margin * 1.5;
+      @include mixins.media-breakpoint-down-lg {
+        margin-bottom: variables.$base-margin * 1.5;
       }
     }
   }
@@ -62,7 +65,7 @@
     &::after {
       position: absolute;
       content: '';
-      background: $color-primary;
+      background: variables.$color-primary;
       width: 100%;
       height: 100%;
       border-radius: 20px;
@@ -74,7 +77,7 @@
     .effect {
       -webkit-mask-image: url(/images/works/effect.png);
       mask-image: url(/images/works/effect.png);
-      background: $color-background-effects;
+      background: variables.$color-background-effects;
       position: absolute;
       top: -96px;
       left: -89px;
@@ -86,12 +89,12 @@
       width: 125%;
       height: 125%;
 
-      @include media-breakpoint-down-xxl {
+      @include mixins.media-breakpoint-down-xxl {
         width: 120%;
         height: 120%;
       }
 
-      @include media-breakpoint-down-sm {
+      @include mixins.media-breakpoint-down-sm {
         top: -75px;
       }
     }
@@ -109,9 +112,9 @@
       &-icon {
         a {
           position: absolute;
-          border: 2px solid $color-primary;
+          border: 2px solid variables.$color-primary;
           border-radius: 50%;
-          background: $color-primary;
+          background: variables.$color-primary;
           z-index: 1;
           width: 86px;
           height: 86px;
@@ -133,7 +136,7 @@
       &-iframe::before,
       &-iframe::after {
         content: '';
-        background: $color-white;
+        background: variables.$color-white;
         border-radius: 50%;
         position: absolute;
         transform-origin: top left;

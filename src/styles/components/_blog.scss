@@ -1,69 +1,72 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
  16. Blog Page and Section Styles
 **********/
 .blog {
-   margin-top: -$base-margin * 22;
+   margin-top: -(variables.$base-margin) * 22;
 
-   @include media-breakpoint-down-xxl {
-      margin-top: -$base-margin * 19.5;
+   @include mixins.media-breakpoint-down-xxl {
+      margin-top: -(variables.$base-margin) * 19.5;
    }
 
-   @include media-breakpoint-down-xl {
-      margin-top: -$base-margin * 10.5;
+   @include mixins.media-breakpoint-down-xl {
+      margin-top: -(variables.$base-margin) * 10.5;
    }
 
-   @include media-breakpoint-down-sm {
-      margin-top: -$base-margin * 11;
+   @include mixins.media-breakpoint-down-sm {
+      margin-top: -(variables.$base-margin) * 11;
    }
 
    // start block hero section
    &-hero {
-      background: $color-header-light;
+      background: variables.$color-header-light;
       text-align: center;
 
       h1 {
-         margin-bottom: $base-margin * 1.5;
+         margin-bottom: variables.$base-margin * 1.5;
 
-         @include media-breakpoint-down-lg {
-            font-size: $base-font-size * 3.5;
+         @include mixins.media-breakpoint-down-lg {
+            font-size: variables.$base-font-size * 3.5;
          }
 
-         @include media-breakpoint-down-md {
-            font-size: $base-font-size * 2.9;
+         @include mixins.media-breakpoint-down-md {
+            font-size: variables.$base-font-size * 2.9;
             line-height: 60px;
          }
 
-         @include media-breakpoint-down-sm {
-            font-size: $base-font-size * 2.5;
+         @include mixins.media-breakpoint-down-sm {
+            font-size: variables.$base-font-size * 2.5;
             line-height: 50px;
          }
       }
 
       p {
-         font-size: $base-font-size * 1.4;
+         font-size: variables.$base-font-size * 1.4;
          line-height: 36.3px;
          font-weight: 500;
 
-         @include media-breakpoint-down-sm {
-            font-size: $base-font-size * 1.25;
+         @include mixins.media-breakpoint-down-sm {
+            font-size: variables.$base-font-size * 1.25;
          }
       }
    }
 
    .section-header {
-      @include media-breakpoint-down-md {
-         padding: $base-padding * 4 0 $base-padding * 4.1;
+      @include mixins.media-breakpoint-down-md {
+         padding: variables.$base-padding * 4 0 variables.$base-padding * 4.1;
       }
    }
 
    // start block section
    &-post {
       position: relative;
-      margin-bottom: $base-margin * 3.2;
+      margin-bottom: variables.$base-margin * 3.2;
 
       &-thumb {
          border-radius: 20px;
-         margin-bottom: $base-margin * 1.9;
+         margin-bottom: variables.$base-margin * 1.9;
          overflow: hidden;
 
          img {
@@ -80,41 +83,41 @@
 
       &-tag {
          a {
-            background: $color-secondary-light;
+            background: variables.$color-secondary-light;
             border-radius: 6px;
             padding: 4px 10px;
             text-decoration: none;
             font-size: 12px;
-            color: $color-primary;
+            color: variables.$color-primary;
             font-weight: 500;
-            margin-bottom: $base-margin * 0.9;
-            margin-right: $base-margin * 0.3;
-            font-family: $font-primary;
+            margin-bottom: variables.$base-margin * 0.9;
+            margin-right: variables.$base-margin * 0.3;
+            font-family: variables.$font-primary;
          }
       }
 
       &-title {
          a {
-            color: $color-text;
+            color: variables.$color-text;
             font-size: 26px;
-            font-family: $font-primary;
+            font-family: variables.$font-primary;
             font-weight: 600;
             line-height: 32.5px;
             text-decoration: none;
-            margin-bottom: $base-margin * 1.1;
+            margin-bottom: variables.$base-margin * 1.1;
             display: block;
             transition: all 0.3s ease-in-out;
 
-            @include media-breakpoint-down-xl {
+            @include mixins.media-breakpoint-down-xl {
                font-size: 22px;
             }
 
-            @include media-breakpoint-down-md {
+            @include mixins.media-breakpoint-down-md {
                font-size: 26px;
             }
 
             &:hover {
-               color: $color-primary;
+               color: variables.$color-primary;
             }
          }
       }
@@ -122,25 +125,25 @@
       &-meta {
          ul {
             padding: 0;
-            margin-left: $base-margin * 1;
+            margin-left: variables.$base-margin * 1;
             display: flex;
             list-style: none;
 
             li {
                font-size: 13px;
                position: relative;
-               color: $color-text-light;
+               color: variables.$color-text-light;
                font-weight: 300;
 
                &:last-child {
-                  padding-left: $base-padding * 0.5;
-                  margin-left: $base-margin * 1.5;
+                  padding-left: variables.$base-padding * 0.5;
+                  margin-left: variables.$base-margin * 1.5;
                }
 
                &::after {
                   position: absolute;
                   content: '';
-                  background: $color-text-light;
+                  background: variables.$color-text-light;
                   border-radius: 50%;
                   width: 5px;
                   height: 5px;
@@ -165,7 +168,7 @@
       margin-top: 0;
 
       .section-header {
-         padding-bottom: $base-padding * 1;
+         padding-bottom: variables.$base-padding * 1;
 
          p {
             width: 72%;
@@ -177,53 +180,53 @@
    // start block details section
    &-details {
       position: relative;
-      padding: $base-padding * 14.4 0 $base-padding * 4.4;
+      padding: variables.$base-padding * 14.4 0 variables.$base-padding * 4.4;
 
-      @include media-breakpoint-down-xxl {
-         padding: $base-padding * 12 0 $base-padding * 4.4;
+      @include mixins.media-breakpoint-down-xxl {
+         padding: variables.$base-padding * 12 0 variables.$base-padding * 4.4;
       }
 
-      @include media-breakpoint-down-xl {
-         padding: $base-padding * 10 0 $base-padding * 2;
+      @include mixins.media-breakpoint-down-xl {
+         padding: variables.$base-padding * 10 0 variables.$base-padding * 2;
       }
 
-      @include media-breakpoint-down-sm {
-         padding: $base-padding * 8.5 0 $base-padding * 2;
+      @include mixins.media-breakpoint-down-sm {
+         padding: variables.$base-padding * 8.5 0 variables.$base-padding * 2;
       }
 
       article {
          position: relative;
 
          .inner-blog-details {
-            @include media-breakpoint-down-sm {
+            @include mixins.media-breakpoint-down-sm {
                text-align: center;
-               margin-bottom: $base-margin * 3.1;
+               margin-bottom: variables.$base-margin * 3.1;
             }
 
             h2 {
-               font-size: $base-font-size * 2.8;
-               margin-bottom: $base-margin * 1.5;
+               font-size: variables.$base-font-size * 2.8;
+               margin-bottom: variables.$base-margin * 1.5;
 
-               @include media-breakpoint-down-md {
-                  font-size: $base-font-size * 2.5;
+               @include mixins.media-breakpoint-down-md {
+                  font-size: variables.$base-font-size * 2.5;
                }
             }
 
             &-meta {
-               margin-bottom: $base-margin * 1.9;
+               margin-bottom: variables.$base-margin * 1.9;
 
                ul {
                   margin-bottom: 0;
 
                   li:not(:first-child) {
                      position: relative;
-                     padding-left: $base-padding * 0.4;
-                     margin-left: $base-margin * 1.2;
+                     padding-left: variables.$base-padding * 0.4;
+                     margin-left: variables.$base-margin * 1.2;
 
                      &::after {
                         position: absolute;
                         content: '';
-                        background: $color-text-light;
+                        background: variables.$color-text-light;
                         width: 2px;
                         height: 15px;
                         top: 50%;
@@ -233,9 +236,9 @@
                   }
 
                   li p {
-                     font-size: $base-font-size;
-                     color: $color-text-light;
-                     font-family: $font-primary;
+                     font-size: variables.$base-font-size;
+                     color: variables.$color-text-light;
+                     font-family: variables.$font-primary;
                      font-weight: 600;
                      margin-bottom: 0;
                   }
@@ -244,18 +247,18 @@
          }
 
          h3 {
-            font-size: $base-font-size * 1.9;
-            margin-bottom: $base-margin * 1.5;
+            font-size: variables.$base-font-size * 1.9;
+            margin-bottom: variables.$base-margin * 1.5;
             line-height: 43px;
          }
 
          p {
-            font-size: $base-font-size * 1.1;
-            margin-bottom: $base-margin * 5;
+            font-size: variables.$base-font-size * 1.1;
+            margin-bottom: variables.$base-margin * 5;
             line-height: 29px;
 
-            @include media-breakpoint-down-xl {
-               margin-bottom: $base-margin * 3.1;
+            @include mixins.media-breakpoint-down-xl {
+               margin-bottom: variables.$base-margin * 3.1;
             }
          }
 
@@ -266,22 +269,22 @@
                list-style: decimal;
 
                &::marker {
-                  font-size: $base-font-size * 1.6;
+                  font-size: variables.$base-font-size * 1.6;
                }
 
                h4 {
-                  font-size: $base-font-size * 1.6;
-                  margin: 0 0 $base-margin * 1.25 $base-margin * 0.5;
+                  font-size: variables.$base-font-size * 1.6;
+                  margin: 0 0 variables.$base-margin * 1.25 variables.$base-margin * 0.5;
                   font-weight: 600;
                }
 
                p {
-                  margin-bottom: $base-margin * 3;
-                  font-size: $base-font-size * 1.1;
+                  margin-bottom: variables.$base-margin * 3;
+                  font-size: variables.$base-font-size * 1.1;
                   font-weight: 500;
 
-                  @include media-breakpoint-down-xl {
-                     margin-bottom: $base-margin * 2;
+                  @include mixins.media-breakpoint-down-xl {
+                     margin-bottom: variables.$base-margin * 2;
                   }
                }
             }
@@ -294,28 +297,28 @@
          top: 50%;
          left: 2%;
 
-         @include media-breakpoint-down-xxxl {
+         @include mixins.media-breakpoint-down-xxxl {
             left: 1%;
          }
 
-         @include media-breakpoint-down-xxl {
+         @include mixins.media-breakpoint-down-xxl {
             left: 0%;
          }
 
-         @include media-breakpoint-down-md {
+         @include mixins.media-breakpoint-down-md {
             display: none;
          }
 
          .icon {
             position: relative;
             transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            margin-bottom: $base-margin;
+            margin-bottom: variables.$base-margin;
             display: inline-block;
             z-index: 99;
 
             svg {
                path {
-                  fill: $color-text-light;
+                  fill: variables.$color-text-light;
                }
             }
 
@@ -323,8 +326,8 @@
                position: absolute;
                left: 20px;
                font-size: 10px;
-               background: $color-secondary-light;
-               color: $color-primary;
+               background: variables.$color-secondary-light;
+               color: variables.$color-primary;
                padding: 7px 10px;
                border-radius: 5px;
                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -340,7 +343,7 @@
                   content: '';
                   height: 8px;
                   width: 8px;
-                  background: $color-secondary-light;
+                  background: variables.$color-secondary-light;
                   top: 50%;
                   left: 0%;
                   transform: translate(-50%, -50%) rotate(45deg);
@@ -351,7 +354,7 @@
             &:hover {
                svg {
                   path {
-                     fill: $color-primary;
+                     fill: variables.$color-primary;
                   }
                }
 
@@ -381,8 +384,8 @@
          border-radius: 20px !important;
 
          &.active {
-            background: $color-primary !important;
-            border-color: $color-primary !important;
+            background: variables.$color-primary !important;
+            border-color: variables.$color-primary !important;
          }
 
          svg {
@@ -392,7 +395,7 @@
          &:hover {
             svg {
                g {
-                  fill: $color-primary;
+                  fill: variables.$color-primary;
                }
             }
          }
@@ -401,22 +404,22 @@
 
    /* start Related Blog Style */
    &-related {
-      padding: $base-padding * 7 0 $base-padding * 5;
-      background: $color-gray-dark;
+      padding: variables.$base-padding * 7 0 variables.$base-padding * 5;
+      background: variables.$color-gray-dark;
 
-      @include media-breakpoint-down-xl {
-         padding: $base-padding * 5 0 $base-padding * 0;
+      @include mixins.media-breakpoint-down-xl {
+         padding: variables.$base-padding * 5 0 variables.$base-padding * 0;
       }
 
-      @include media-breakpoint-down-lg {
-         padding: $base-padding * 3.1 0 $base-padding * 2;
+      @include mixins.media-breakpoint-down-lg {
+         padding: variables.$base-padding * 3.1 0 variables.$base-padding * 2;
       }
 
       h2 {
-         margin-bottom: $base-margin * 3;
+         margin-bottom: variables.$base-margin * 3;
 
-         @include media-breakpoint-down-lg {
-            font-size: $base-font-size * 2.5;
+         @include mixins.media-breakpoint-down-lg {
+            font-size: variables.$base-font-size * 2.5;
          }
       }
    }

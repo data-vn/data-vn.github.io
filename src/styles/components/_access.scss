@@ -1,34 +1,37 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
   10. Access Section Styles
 **********/
 .access {
-  padding: $base-padding * 9.4 $base-padding * 0 $base-padding * 12.5;
+  padding: variables.$base-padding * 9.4 variables.$base-padding * 0 variables.$base-padding * 12.5;
   position: relative;
-  @include media-breakpoint-down-xxl {
-    padding: $base-padding * 7 $base-padding * 0 $base-padding * 8;
+  @include mixins.media-breakpoint-down-xxl {
+    padding: variables.$base-padding * 7 variables.$base-padding * 0 variables.$base-padding * 8;
   }
-  @include media-breakpoint-down-xl {
-    padding: $base-padding * 7 $base-padding * 0 $base-padding * 5;
+  @include mixins.media-breakpoint-down-xl {
+    padding: variables.$base-padding * 7 variables.$base-padding * 0 variables.$base-padding * 5;
   }
-  @include media-breakpoint-down-lg {
-    padding: $base-padding * 5 $base-padding * 0 $base-padding * 5;
+  @include mixins.media-breakpoint-down-lg {
+    padding: variables.$base-padding * 5 variables.$base-padding * 0 variables.$base-padding * 5;
   }
-  @include media-breakpoint-down-sm {
-    padding: $base-padding * 3.1 $base-padding * 0 $base-padding * 6.2;
+  @include mixins.media-breakpoint-down-sm {
+    padding: variables.$base-padding * 3.1 variables.$base-padding * 0 variables.$base-padding * 6.2;
   }
   .section-header {
-    padding-top: $base-padding * 5;
-    padding-bottom: $base-padding * 0;
-    @include media-breakpoint-down-sm {
-      padding-top: $base-padding * 2.5;
+    padding-top: variables.$base-padding * 5;
+    padding-bottom: variables.$base-padding * 0;
+    @include mixins.media-breakpoint-down-sm {
+      padding-top: variables.$base-padding * 2.5;
     }
     p {
       width: 65%;
       margin: auto;
-      @include media-breakpoint-down-xxl {
+      @include mixins.media-breakpoint-down-xxl {
         width: 70%;
       }
-      @include media-breakpoint-down-md {
+      @include mixins.media-breakpoint-down-md {
         width: 90%;
       }
     }
@@ -37,19 +40,19 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @include media-breakpoint-down-lg {
+    @include mixins.media-breakpoint-down-lg {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 50px;
     }
-    @include media-breakpoint-down-md {
+    @include mixins.media-breakpoint-down-md {
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
-    @include media-breakpoint-down-sm {
+    @include mixins.media-breakpoint-down-sm {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
-    @include media-breakpoint-down-sm {
+    @include mixins.media-breakpoint-down-sm {
       grid-row-gap: 20px;
       grid-column-gap: 14px;
     }
@@ -57,7 +60,7 @@
       .logo {
         width: 200px;
         height: 200px;
-        background: $color-cyan-dark;
+        background: variables.$color-cyan-dark;
         line-height: 200px;
         display: flex;
         align-items: center;
@@ -65,24 +68,24 @@
         border-radius: 30px;
         transition: all 0.3s ease-in-out;
         margin: 0 auto;
-        @include media-breakpoint-down-xxl {
+        @include mixins.media-breakpoint-down-xxl {
           width: 160px;
           height: 160px;
         }
-        @include media-breakpoint-down-xl {
+        @include mixins.media-breakpoint-down-xl {
           width: 140px;
           height: 140px;
         }
-        @include media-breakpoint-down-lg {
+        @include mixins.media-breakpoint-down-lg {
           width: 160px;
           height: 160px;
         }
-        @include media-breakpoint-down-sm {
+        @include mixins.media-breakpoint-down-sm {
           width: 117px;
           height: 117px;
         }
         svg {
-          @include media-breakpoint-down-sm {
+          @include mixins.media-breakpoint-down-sm {
             width: 55px;
           }
           path {
@@ -91,8 +94,8 @@
         }
       }
       p {
-        font-size: $base-font-size * 1.2;
-        font-weight: $medium-font-weight;
+        font-size: variables.$base-font-size * 1.2;
+        font-weight: variables.$medium-font-weight;
         transition: all 0.3s ease-in-out;
       }
     }

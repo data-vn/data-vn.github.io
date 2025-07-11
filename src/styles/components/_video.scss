@@ -1,17 +1,20 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
   12. Video Section Styles 
 **********/
 .video {
   position: relative;
-  padding-top: $base-padding * 13;
+  padding-top: variables.$base-padding * 13;
   overflow: hidden;
 
-  @include media-breakpoint-down-xxl {
-    padding-top: $base-padding * 8;
+  @include mixins.media-breakpoint-down-xxl {
+    padding-top: variables.$base-padding * 8;
   }
 
-  @include media-breakpoint-down-xl {
-    padding-top: $base-padding * 4;
+  @include mixins.media-breakpoint-down-xl {
+    padding-top: variables.$base-padding * 4;
   }
 
   .banner {
@@ -21,7 +24,7 @@
     &::after {
       position: absolute;
       content: '';
-      background: $color-primary;
+      background: variables.$color-primary;
       width: 100%;
       height: 100%;
       border-radius: 20px;
@@ -32,7 +35,7 @@
 
     .effect-one,
     .effect-two {
-      @include media-breakpoint-down-md {
+      @include mixins.media-breakpoint-down-md {
         mask-size: 70%;
         -webkit-mask-size: 70%;
         -webkit-mask-repeat: no-repeat;
@@ -43,7 +46,7 @@
     .effect-one {
       -webkit-mask-image: url(/images/video/effect-one.png);
       mask-image: url(/images/video/effect-one.png);
-      background: $color-background-effects;
+      background: variables.$color-background-effects;
       position: absolute;
       top: 54%;
       left: -89px;
@@ -51,15 +54,15 @@
       width: 669px;
       height: 339px;
 
-      @include media-breakpoint-down-xl {
+      @include mixins.media-breakpoint-down-xl {
         top: 37%;
       }
 
-      @include media-breakpoint-down-lg {
+      @include mixins.media-breakpoint-down-lg {
         top: 30%;
       }
 
-      @include media-breakpoint-down-md {
+      @include mixins.media-breakpoint-down-md {
         top: 40%;
       }
     }
@@ -67,7 +70,7 @@
     .effect-two {
       -webkit-mask-image: url(/images/video/effect-two.png);
       mask-image: url(/images/video/effect-two.png);
-      background: $color-background-effects;
+      background: variables.$color-background-effects;
       position: absolute;
       top: -96px;
       right: -80px;
@@ -75,11 +78,11 @@
       width: 583px;
       height: 398px;
 
-      @include media-breakpoint-down-lg {
+      @include mixins.media-breakpoint-down-lg {
         top: -70px;
       }
 
-      @include media-breakpoint-down-md {
+      @include mixins.media-breakpoint-down-md {
         right: -234px;
       }
     }
@@ -95,9 +98,9 @@
   &-icon {
     a {
       position: absolute;
-      border: 2px solid $color-primary;
+      border: 2px solid variables.$color-primary;
       border-radius: 50%;
-      background: $color-primary;
+      background: variables.$color-primary;
       z-index: 1;
       width: 86px;
       height: 86px;
@@ -119,7 +122,7 @@
   &-iframe::before,
   &-iframe::after {
     content: '';
-    background: $color-white;
+    background: variables.$color-white;
     border-radius: 50%;
     position: absolute;
     transform-origin: top left;

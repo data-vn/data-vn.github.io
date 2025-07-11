@@ -1,28 +1,31 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
  07. cta Page and Section Styles
 **********/
 
 .cta {
   text-align: center;
-  background: $color-header;
+  background: variables.$color-header;
   .section-header {
-    @include media-breakpoint-down-sm {
-      padding: $base-padding * 4.2 0 $base-padding * 6.3;
+    @include mixins.media-breakpoint-down-sm {
+      padding: variables.$base-padding * 4.2 0 variables.$base-padding * 6.3;
     }
     h2 {
-      color: $color-white;
-      margin-bottom: $base-margin * 1.5;
+      color: variables.$color-white;
+      margin-bottom: variables.$base-margin * 1.5;
     }
     p {
-      color: $color-secondary-dark;
+      color: variables.$color-secondary-dark;
       width: 70%;
-      margin: 0 auto $base-margin * 2.5;
-      @include media-breakpoint-down-xl {
+      margin: 0 auto variables.$base-margin * 2.5;
+      @include mixins.media-breakpoint-down-xl {
         width: 80%;
       }
-      @include media-breakpoint-down-sm {
+      @include mixins.media-breakpoint-down-sm {
         width: 100%;
-        color: $color-primary-light;
+        color: variables.$color-primary-light;
       }
     }
   }
@@ -33,24 +36,24 @@
         padding: 0;
         .form-control {
           position: relative;
-          color: $color-white;
+          color: variables.$color-white;
           border-radius: 24px;
           border-bottom-right-radius: 24px !important;
           border-top-right-radius: 24px !important;
           padding: 35px 200px 31px 33px;
           background: rgba(229, 59, 42, 0.15);
-          border: 1.20519px solid $color-primary;
+          border: 1.20519px solid variables.$color-primary;
           z-index: 0;
-          @include media-breakpoint-down-sm {
+          @include mixins.media-breakpoint-down-sm {
             padding: 20px 180px 20px 20px;
           }
           &:focus {
             box-shadow: none;
-            background: $color-header;
+            background: variables.$color-header;
           }
         }
         ::placeholder {
-          color: $color-secondary-light;
+          color: variables.$color-secondary-light;
         }
         .subscribe {
           position: absolute;
@@ -59,9 +62,9 @@
           transform: translateY(-50%);
           right: 10px;
           .btn-lg {
-            padding: $base-padding * 1.2 $base-padding * 2.2;
-            @include media-breakpoint-down-sm {
-              padding: $base-padding * 0.7 $base-padding * 1;
+            padding: variables.$base-padding * 1.2 variables.$base-padding * 2.2;
+            @include mixins.media-breakpoint-down-sm {
+              padding: variables.$base-padding * 0.7 variables.$base-padding * 1;
             }
           }
         }
@@ -70,21 +73,21 @@
   }
   // start cta two section
   &-two {
-    padding: $base-padding * 0 0 $base-padding * 8.5;
-    background: $color-gray-dark;
-    @include media-breakpoint-down-xl {
-      padding: $base-padding * 0 0 $base-padding * 3;
+    padding: variables.$base-padding * 0 0 variables.$base-padding * 8.5;
+    background: variables.$color-gray-dark;
+    @include mixins.media-breakpoint-down-xl {
+      padding: variables.$base-padding * 0 0 variables.$base-padding * 3;
     }
     .section-header {
-      padding-top: $base-padding * 6.2;
-      @include media-breakpoint-down-xl {
-        padding-top: $base-padding * 3;
+      padding-top: variables.$base-padding * 6.2;
+      @include mixins.media-breakpoint-down-xl {
+        padding-top: variables.$base-padding * 3;
       }
       h2 {
-        color: $color-header;
+        color: variables.$color-header;
       }
       p {
-        color: $color-text-light;
+        color: variables.$color-text-light;
       }
     }
 
@@ -93,19 +96,19 @@
         .input-group {
           .form-control {
             &:focus {
-              border-color: $color-header;
+              border-color: variables.$color-header;
             }
           }
           .subscribe {
             .btn-lg {
-              padding: $base-padding * 1.2 $base-padding * 2.2;
-              @include media-breakpoint-down-sm {
-                padding: $base-padding * 0.7 $base-padding * 1;
+              padding: variables.$base-padding * 1.2 variables.$base-padding * 2.2;
+              @include mixins.media-breakpoint-down-sm {
+                padding: variables.$base-padding * 0.7 variables.$base-padding * 1;
               }
             }
           }
           ::placeholder {
-            color: $color-primary;
+            color: variables.$color-primary;
           }
         }
       }

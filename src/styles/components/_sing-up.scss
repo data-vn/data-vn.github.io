@@ -1,37 +1,40 @@
+@use "../mixins";
+@use "../variables";
+
 /********** 
  22. Sing-up Section Styles
 **********/
 
 .sing-up {
-  background: $color-header-light;
+  background: variables.$color-header-light;
 
   &-body {
-    background: $color-primary;
+    background: variables.$color-primary;
     border-radius: 1.25rem;
     padding: 70px 80px 50px;
     max-width: 650px;
     margin: 0 auto;
 
-    @include media-breakpoint-down-xxl {
+    @include mixins.media-breakpoint-down-xxl {
       padding: 70px 100px 100px;
     }
 
-    @include media-breakpoint-down-xl {
+    @include mixins.media-breakpoint-down-xl {
       padding: 70px;
     }
 
-    @include media-breakpoint-down-md {
+    @include mixins.media-breakpoint-down-md {
       padding: 50px 30px;
     }
 
     h2 {
-      font-size: $base-font-size * 3.125;
-      color: $color-white;
+      font-size: variables.$base-font-size * 3.125;
+      color: variables.$color-white;
       line-height: 1.4;
       text-align: center;
       padding-bottom: 30px;
       margin-bottom: 30px;
-      border-bottom: 1px solid $color-primary-light;
+      border-bottom: 1px solid variables.$color-primary-light;
     }
   }
 
@@ -56,7 +59,7 @@
       font-size: 1.125rem;
       font-weight: 500;
       line-height: 1.6;
-      color: $color-white;
+      color: variables.$color-white;
       background-color: rgba(255, 255, 255, 0.2);
       background-clip: padding-box;
       border: 1px solid rgba(255, 255, 255, 0.4);
@@ -65,9 +68,9 @@
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
       &:focus {
-        color: $color-white;
+        color: variables.$color-white;
         background-color: rgba(255, 255, 255, 0.2);
-        border-color: $color-white;
+        border-color: variables.$color-white;
         outline: 0;
         box-shadow: none;
       }
@@ -77,13 +80,13 @@
       opacity: 0.8;
 
       .forget-password {
-        color: $color-white;
+        color: variables.$color-white;
       }
     }
 
     .form-check-input {
       background-color: transparent;
-      border-color: $color-white;
+      border-color: variables.$color-white;
       border-radius: 4px;
 
       &:focus {
@@ -92,13 +95,13 @@
     }
 
     .create-account {
-      font-size: $base-font-size * 1.25;
-      font-weight: $semibold-font-weight;
+      font-size: variables.$base-font-size * 1.25;
+      font-weight: variables.$semibold-font-weight;
       line-height: 1.75;
       text-align: center;
-      color: $color-white;
+      color: variables.$color-white;
       display: block;
-      margin-top: $base-margin * 0.5;
+      margin-top: variables.$base-margin * 0.5;
     }
 
     .input-group-text {
@@ -114,11 +117,11 @@
     }
 
     label {
-      color: $color-white;
-      font-size: $base-font-size;
-      font-weight: $medium-font-weight;
+      color: variables.$color-white;
+      font-size: variables.$base-font-size;
+      font-weight: variables.$medium-font-weight;
       line-height: 1.4;
-      margin-bottom: $base-margin * 0.75;
+      margin-bottom: variables.$base-margin * 0.75;
     }
 
     textarea {
@@ -128,7 +131,7 @@
     }
 
     ::placeholder {
-      color: $color-white;
+      color: variables.$color-white;
       font-size: 14px;
       font-weight: 400;
     }
@@ -140,37 +143,37 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    @include media-breakpoint-down-xl {
+    @include mixins.media-breakpoint-down-xl {
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
 
-    @include media-breakpoint-down-md {
+    @include mixins.media-breakpoint-down-md {
       justify-content: flex-start;
     }
 
-    @include media-breakpoint-down-sm {}
+    @include mixins.media-breakpoint-down-sm {}
 
     &-item {
       label {
         margin-bottom: 0;
 
-        @include media-breakpoint-down-xl {
-          margin-bottom: $base-margin * 0.75;
+        @include mixins.media-breakpoint-down-xl {
+          margin-bottom: variables.$base-margin * 0.75;
         }
 
-        @include media-breakpoint-down-md {
+        @include mixins.media-breakpoint-down-md {
           padding: 10px 8px;
-          margin-right: $base-margin * 0.25;
+          margin-right: variables.$base-margin * 0.25;
         }
       }
     }
   }
 
   .btn-check:checked[type='radio']+label {
-    background: $color-white;
-    color: $color-primary !important;
+    background: variables.$color-white;
+    color: variables.$color-primary !important;
   }
 
   .input-group-password {
@@ -182,9 +185,9 @@
       border-radius: 10px !important;
 
       &:focus {
-        color: $color-white;
+        color: variables.$color-white;
         background-color: rgba(255, 255, 255, 0.2);
-        border-color: $color-white;
+        border-color: variables.$color-white;
         outline: 0;
         box-shadow: none;
       }
@@ -200,8 +203,8 @@
       z-index: 11;
       transform: translateY(-50%);
       margin-right: 10px;
-      font-size: $base-font-size * 1.5;
-      color: $color-white;
+      font-size: variables.$base-font-size * 1.5;
+      color: variables.$color-white;
       padding: 0;
     }
   }

@@ -1,38 +1,41 @@
+@use "../mixins";
+@use "../variables";
+
 /* Privacy Page */
 
 .privacy {
 	position: relative;
-	margin-top: $base-margin;
-	padding-bottom: $base-padding * 7.5;
+	margin-top: variables.$base-margin;
+	padding-bottom: variables.$base-padding * 7.5;
 	z-index: 99;
 
-	@include media-breakpoint-down-xxl {
-		padding-bottom: $base-padding * 4;
+	@include mixins.media-breakpoint-down-xxl {
+		padding-bottom: variables.$base-padding * 4;
 	}
 
-	@include media-breakpoint-down-md {
-		padding-bottom: $base-padding * 0;
+	@include mixins.media-breakpoint-down-md {
+		padding-bottom: variables.$base-padding * 0;
 	}
 
 	&-hero {
 		background: #f7f8fa;
-		padding: $base-padding * 13.5 0 $base-padding * 37;
+		padding: variables.$base-padding * 13.5 0 variables.$base-padding * 37;
 
-		@include media-breakpoint-down-xxl {
-			padding: $base-padding * 12 0 $base-padding * 37;
+		@include mixins.media-breakpoint-down-xxl {
+			padding: variables.$base-padding * 12 0 variables.$base-padding * 37;
 		}
 
-		@include media-breakpoint-down-sm {
-			padding: $base-padding * 10 0 $base-padding * 37;
+		@include mixins.media-breakpoint-down-sm {
+			padding: variables.$base-padding * 10 0 variables.$base-padding * 37;
 		}
 
 		&-content {
 			h1 {
-				font-size: $base-font-size * 4;
-				margin-bottom: $base-margin * 1.5;
+				font-size: variables.$base-font-size * 4;
+				margin-bottom: variables.$base-margin * 1.5;
 
-				@include media-breakpoint-down-md {
-					font-size: $base-font-size * 2.5;
+				@include mixins.media-breakpoint-down-md {
+					font-size: variables.$base-font-size * 2.5;
 				}
 			}
 		}
@@ -40,21 +43,21 @@
 
 	&-wrapper {
 		display: flex;
-		background: $color-white;
-		padding: $base-padding * 5 0 $base-padding * 1 $base-padding * 1.6;
+		background: variables.$color-white;
+		padding: variables.$base-padding * 5 0 variables.$base-padding * 1 variables.$base-padding * 1.6;
 		box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
 		border-radius: 20px;
 	}
 
 	.navbar {
-		background: $color-white;
+		background: variables.$color-white;
 		position: sticky;
 		top: 150px;
 		padding: 0;
 		border-radius: 20px;
 		z-index: 1;
 
-		@include media-breakpoint-down-lg {
+		@include mixins.media-breakpoint-down-lg {
 			display: none;
 		}
 	}
@@ -62,7 +65,7 @@
 	.nav-pills .nav-link.active,
 	.nav-pills .show>.nav-link {
 		background: none;
-		color: $color-primary;
+		color: variables.$color-primary;
 	}
 
 	&-nav {
@@ -72,14 +75,14 @@
 
 		.nav-pills {
 			display: block;
-			padding-right: $base-padding * 4;
+			padding-right: variables.$base-padding * 4;
 
-			@include media-breakpoint-down-xl {
-				padding-right: $base-padding * 1;
+			@include mixins.media-breakpoint-down-xl {
+				padding-right: variables.$base-padding * 1;
 			}
 
 			.nav-item {
-				padding-bottom: $base-padding * 1.9;
+				padding-bottom: variables.$base-padding * 1.9;
 				position: relative;
 
 				&:last-child {
@@ -91,10 +94,10 @@
 				}
 
 				a {
-					font-size: $base-font-size;
+					font-size: variables.$base-font-size;
 					position: relative;
-					color: $color-text-light;
-					font-family: $font-primary;
+					color: variables.$color-text-light;
+					font-family: variables.$font-primary;
 					font-weight: 600;
 					margin-bottom: 0px;
 					padding: 0;
@@ -108,16 +111,16 @@
 		.card {
 			background: none;
 			padding: 0;
-			margin-bottom: $base-margin * 3;
+			margin-bottom: variables.$base-margin * 3;
 
-			@include media-breakpoint-down-xl {
-				margin-bottom: $base-margin * 3.1;
+			@include mixins.media-breakpoint-down-xl {
+				margin-bottom: variables.$base-margin * 3.1;
 			}
 
 			h3 {
-				color: $color-text-light;
-				font-size: $base-font-size * 1.9;
-				margin-bottom: $base-margin * 1.9;
+				color: variables.$color-text-light;
+				font-size: variables.$base-font-size * 1.9;
+				margin-bottom: variables.$base-margin * 1.9;
 			}
 
 			&-body {
@@ -126,28 +129,28 @@
 				.card-text,
 				.card-text p {
 					line-height: 29.7px;
-					color: $color-text-light;
-					font-size: $base_font-size * 1.1;
+					color: variables.$color-text-light;
+					font-size: variables.$base_font-size * 1.1;
 					font-weight: 500;
-					margin-bottom: $base-margin * 2.5;
-					padding-left: $base-padding * 1.5;
+					margin-bottom: variables.$base-margin * 2.5;
+					padding-left: variables.$base-padding * 1.5;
 
-					@include media-breakpoint-down-md {
-						padding: 0 $base-padding * 1.5;
+					@include mixins.media-breakpoint-down-md {
+						padding: 0 variables.$base-padding * 1.5;
 					}
 				}
 
 				ul {
 					margin-bottom: 0;
-					padding-left: $base-padding * 1.6;
+					padding-left: variables.$base-padding * 1.6;
 
 					li {
 						position: relative;
 						line-height: 29.7px;
-						color: $color-text-light;
-						font-size: $base_font-size * 1.1;
+						color: variables.$color-text-light;
+						font-size: variables.$base_font-size * 1.1;
 						font-weight: 500;
-						margin-bottom: $base-margin * 1.25;
+						margin-bottom: variables.$base-margin * 1.25;
 					}
 				}
 			}
@@ -156,9 +159,9 @@
 }
 
 .privacy-hero+.privacy {
-	margin-top: -$base-margin * 33.5;
+	margin-top: -(variables.$base-margin) * 33.5;
 
-	@include media-breakpoint-down-md {
-		margin-top: -$base-margin * 35.8;
+	@include mixins.media-breakpoint-down-md {
+		margin-top: -(variables.$base-margin) * 35.8;
 	}
 }

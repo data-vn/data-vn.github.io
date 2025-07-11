@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 /********** 
  3. Container and widths  Styles 
 **********/
@@ -56,9 +59,9 @@
   }
 }
 .container {
-  @include media-breakpoint-down-sm {
-    padding-left: $base-padding;
-    padding-right: $base-padding;
+  @include mixins.media-breakpoint-down-sm {
+    padding-left: variables.$base-padding;
+    padding-right: variables.$base-padding;
   }
 }
 
