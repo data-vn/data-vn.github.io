@@ -6,9 +6,22 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prebuild:fetch-theme-color": "node fetch-theme-color.cjs",
+    "bookshop": "npx @bookshop/generate --bookshop src/components"
   },
   "dependencies": {
-    "astro": "^5.11.0"
+    "@astrojs/react": "^4.3.0",
+    "@makotot/ghostui": "^2.0.0",
+    "astro": "^5.11.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "astro-seo": "^0.8.4",
+    "markdown-it": "^14.1.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "sass": "^1.89.2"
   }
 }
