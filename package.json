@@ -24,5 +24,8 @@
     "astro-seo": "^0.8.4",
     "markdown-it": "^14.1.0",
     "sass": "^1.89.2"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*"
   }
 }
