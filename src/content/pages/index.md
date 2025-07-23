@@ -11,57 +11,54 @@ seo:
   no_index: false
 content_blocks:
   - _bookshop_name: home/hero
-    title: Test test
+    title: DataVN
     description: >-
-      With Sendit, you can quickly create beautiful rich emails that capture a
-      reader's attention, engage them, and convert them into customers.
+      Nền tảng dữ liệu số định hướng dữ liệu (data-driven), giúp kết nối người dùng với đa dạng
+      dịch vụ tài chính số và các tiện ích số thông qua hệ thống phân tích, đánh giá và tích hợp API mở.
     image: /images/hero/hero-image-2.png
     image_alt: Reports dashboard
     button:
       text: Try This Free
       link: /signup/
   - _bookshop_name: global/counter
-    title: Scale your
-    title_suffix: Business
+    title: GIẢI PHÁP
+    title_suffix: CỦA DATAVN
     description: >-
-      We have an extensive library of pre-written sales emails, proven marketing
-      templates, and more to get you started on your next project.
+      Nền tảng số toàn diện, tích hợp định danh điện tử, đánh giá tín dụng thông minh từ dữ liệu đa nguồn và kết nối tự động với các dịch vụ tài chính phù hợp thông qua hệ sinh thái OpenAPI.
     alternate_style: false
     numbers:
-      - prefix: $
-        number: 200
-        suffix: m
-        text: Venture capital raised
+      - prefix: 
+        number: 10
+        suffix: +
+        text: Đối tác toàn cầu
       - prefix:
-        number: 2016
+        number: 2025
         suffix:
-        text: Established in
+        text: Được thành lập
       - prefix:
-        number: 40
+        number: 10
         suffix: +
-        text: Amazing team members
+        text: Chuyên gia hàng đầu
       - prefix:
-        number: 4322
+        number: 100
         suffix: +
-        text: Active users and growing
+        text: Khách hàng hài lòng
   - _bookshop_name: home/video
     image: /images/video/video-thum.jpg
     image_alt: Thumbnail for video
     video_url: https://vimeo.com/45830194
   - _bookshop_name: global/header
-    title: "Sendit "
-    title_suffix: Features
+    title: "TÍNH NĂNG "
+    title_suffix: NỔI BẬT
     remove_top_padding: true
     description: >-
-      Our platform offers the most advanced features including automated email
-      content creation, dynamic personalization, and customer segmentation.
+      Nền tảng tài chính số linh hoạt, tích hợp định danh điện tử, chấm điểm tín dụng thông minh và hệ thống OpenAPI, cho phép kết nối nhanh chóng, quản trị hiệu quả và tùy biến giải pháp theo nhu cầu đối tác.
   - _bookshop_name: global/feature
     image: /images/feature/feature-card-one.png
     image_alt: Message inbox
-    title: Email Campaign in one minute
+    title: Xác thực định danh thông minh
     description: >-
-      Send an email campaign with one click, in just minutes. Automate your
-      emails and content, while keeping the human touch.
+      Giải pháp xác thực người dùng nhanh chóng, chính xác, giúp rút ngắn quy trình KYC và nâng cao trải nghiệm số.
     button:
       link: /signup
       text: Try This Free
@@ -69,10 +66,9 @@ content_blocks:
   - _bookshop_name: global/feature
     image: /images/feature/feature-card-two.png
     image_alt: Visitor chart
-    title: See every Lead in one Place
+    title: Chấm điểm tín dụng định hướng dữ liệu
     description: >-
-      Sales analytics and automation made simple: see every sales lead in one
-      place, regardless of where it came from.
+      Phân tích hồ sơ tín dụng từ nhiều nguồn dữ liệu hành vi và tài chính, hỗ trợ đánh giá rủi ro hiệu quả và toàn diện hơn.
     button:
       link: /signup
       text: Try This Free
@@ -80,21 +76,30 @@ content_blocks:
   - _bookshop_name: global/feature
     image: /images/feature/feature-card-three.png
     image_alt: File upload
-    title: 100% free uploads
+    title: Bộ API tuân thủ chuẩn OpenAPI
     description: >-
-      Sendit is used by everyone from small businesses to fortune 500 companies.
-      Browse our collection of email marketing templates and start sending
-      beautiful emails in minutes.
+      Sở hữu bộ API tuân thủ chuẩn OpenAPI, cho phép các đối tác tích hợp nhanh chóng và dễ dàng vào hệ thống hiện tại của mình.
+    button:
+      link: /signup
+      text: Try This Free
+    reversed: false
+  - _bookshop_name: global/feature
+    image: /images/feature/feature-card-three.png
+    image_alt: File upload
+    title: Giải pháp tín dụng linh hoạt
+    description: >-
+      Thiết kế linh hoạt, cho phép tùy chỉnh theo đặc thù hoạt động, mô hình kinh doanh và nhóm khách hàng mục tiêu của từng đối tác, nhằm tối ưu hiệu quả triển khai và gia tăng giá trị sử dụng dịch vụ.
     button:
       link: /signup
       text: Try This Free
     reversed: false
   - _bookshop_name: global/testimonial
-    title: Build relationships that
-    title_suffix: last
+    title: ĐỐI TÁC 
+    title_suffix: CỦA DATAVN
     description: >-
-      Customers from around the world are building game changing email marketing
-      campaigns.
+       DataVN luôn đặt đối tác làm trọng tâm, cung cấp giải pháp định danh, 
+       chấm điểm tín dụng và tích hợp dịch vụ tài chính linh hoạt, 
+       phù hợp với nhu cầu đa dạng.
     slider:
       - image: /images/testimonial/logo-2.jpg
         image_alt: Profile photo of Pete Fish

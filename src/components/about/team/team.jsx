@@ -1,4 +1,4 @@
-export default function AboutTeam(block) {
+export default function Team(block) {
   return (
     <div className="team">
       <div className="container">
